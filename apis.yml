@@ -1,0 +1,178 @@
+aid: plasmic
+url: https://raw.githubusercontent.com/api-evangelist/plasmic/refs/heads/main/apis.yml
+name: Plasmic
+kind: company
+description: >-
+  Plasmic is a visual builder and headless CMS for front-end development.
+  Designers and developers compose pages and components in Plasmic Studio, then
+  ship them via either the Headless API (Loader) for runtime fetching or the
+  Codegen pipeline for generated React/Next.js/Gatsby source. The platform also
+  exposes a CMS for structured content, a CLI for code synchronization, and a
+  REST API for programmatic access. Open source components live under the
+  plasmicapp GitHub organization.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Visual Builder
+  - Headless CMS
+  - React
+  - Next.js
+  - Gatsby
+  - Low-Code
+  - Frontend
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+apis:
+  - aid: plasmic:studio
+    name: Plasmic Studio
+    description: >-
+      Browser-based visual builder where designers and developers compose
+      pages, components, and design systems. Outputs are consumed downstream
+      by the Loader, Codegen, and CMS APIs.
+    humanURL: https://studio.plasmic.app/
+    baseURL: https://studio.plasmic.app/
+    tags:
+      - Studio
+      - Visual Editor
+    properties:
+      - type: Website
+        url: https://studio.plasmic.app/
+  - aid: plasmic:loader
+    name: Plasmic Loader (Headless API)
+    description: >-
+      Runtime fetching API used by React, Next.js, and Gatsby integrations to
+      pull Studio-published pages and components into a host app. Supports
+      server-side rendering, incremental static regeneration, and on-demand
+      revalidation. Available via @plasmicapp/loader-react,
+      @plasmicapp/loader-nextjs, and @plasmicapp/loader-gatsby.
+    humanURL: https://docs.plasmic.app/learn/loader/
+    baseURL: https://codegen.plasmic.app
+    tags:
+      - Headless
+      - Loader
+      - SSR
+    properties:
+      - type: Documentation
+        url: https://docs.plasmic.app/learn/loader/
+  - aid: plasmic:codegen
+    name: Plasmic Codegen API
+    description: >-
+      Generates React source code from a Plasmic project, synced into the host
+      repository via the Plasmic CLI. Produces editable presentational
+      components alongside skeleton wrappers for app code.
+    humanURL: https://docs.plasmic.app/learn/codegen-guide/
+    baseURL: https://codegen.plasmic.app
+    tags:
+      - Codegen
+      - React
+    properties:
+      - type: Documentation
+        url: https://docs.plasmic.app/learn/codegen-guide/
+  - aid: plasmic:cms
+    name: Plasmic CMS API
+    description: >-
+      Headless content API for structured data managed inside Plasmic. Supports
+      reading and writing rows in models defined in Studio, used to power data
+      bindings inside Plasmic pages or external apps.
+    humanURL: https://docs.plasmic.app/learn/plasmic-cms/
+    baseURL: https://data.plasmic.app/api/v1/cms
+    tags:
+      - CMS
+      - Headless Content
+    properties:
+      - type: Documentation
+        url: https://docs.plasmic.app/learn/plasmic-cms/
+  - aid: plasmic:cli
+    name: Plasmic CLI
+    description: >-
+      Command-line tool (plasmicapp/cli) for authenticating against Plasmic
+      and syncing generated code into a repository. Commands include
+      `plasmic auth`, `plasmic sync`, and `plasmic watch`.
+    humanURL: https://www.npmjs.com/package/@plasmicapp/cli
+    baseURL: https://github.com/plasmicapp/plasmic
+    tags:
+      - CLI
+      - Tooling
+    properties:
+      - type: Repository
+        url: https://github.com/plasmicapp/plasmic
+  - aid: plasmic:react
+    name: Plasmic React Integration
+    description: >-
+      React loader and components for embedding Plasmic-built pages inside
+      React apps.
+    humanURL: https://docs.plasmic.app/learn/react-quickstart/
+    baseURL: https://www.npmjs.com/package/@plasmicapp/loader-react
+    tags:
+      - React
+      - Integration
+    properties:
+      - type: Documentation
+        url: https://docs.plasmic.app/learn/react-quickstart/
+  - aid: plasmic:nextjs
+    name: Plasmic Next.js Integration
+    description: >-
+      Next.js loader supporting both pages and app router. Used to render
+      Plasmic-managed pages with SSR/SSG/ISR.
+    humanURL: https://docs.plasmic.app/learn/nextjs-quickstart/
+    baseURL: https://www.npmjs.com/package/@plasmicapp/loader-nextjs
+    tags:
+      - Next.js
+      - Integration
+    properties:
+      - type: Documentation
+        url: https://docs.plasmic.app/learn/nextjs-quickstart/
+  - aid: plasmic:gatsby
+    name: Plasmic Gatsby Integration
+    description: >-
+      Gatsby plugin loader for embedding Plasmic-built pages inside Gatsby
+      sites.
+    humanURL: https://docs.plasmic.app/learn/gatsby-quickstart/
+    baseURL: https://www.npmjs.com/package/@plasmicapp/loader-gatsby
+    tags:
+      - Gatsby
+      - Integration
+    properties:
+      - type: Documentation
+        url: https://docs.plasmic.app/learn/gatsby-quickstart/
+  - aid: plasmic:mcp
+    name: Plasmic MCP Server
+    description: >-
+      Model Context Protocol server exposing Plasmic project context to
+      AI agents and IDE assistants.
+    humanURL: https://docs.plasmic.app/
+    baseURL: https://github.com/plasmicapp/plasmic
+    tags:
+      - MCP
+      - AI
+    properties:
+      - type: Repository
+        url: https://github.com/plasmicapp/plasmic
+common:
+  - type: Website
+    url: https://www.plasmic.app/
+  - type: Documentation
+    url: https://docs.plasmic.app/
+  - type: GitHub
+    url: https://github.com/plasmicapp/plasmic
+  - type: Forum
+    url: https://forum.plasmic.app/
+  - type: Slack
+    url: https://plasmic.app/slack
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/plasmicapp
+  - type: Twitter
+    url: https://twitter.com/plasmicapp
+integrations:
+  - name: React
+  - name: Next.js
+  - name: Gatsby
+  - name: GitHub
+  - name: Vercel
+  - name: Netlify
+  - name: Contentful
+  - name: Sanity
+  - name: Shopify
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
