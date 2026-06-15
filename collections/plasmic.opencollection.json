@@ -1,0 +1,228 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Plasmic CMS API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-plasmic-api-cms-tokens",
+      "value": "{{x-plasmic-api-cms-tokens}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Query items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.plasmic.app/api/v1/cms/databases/:CMS_ID/tables/:CMS_MODEL_ID/query",
+            "params": [
+              {
+                "name": "CMS_ID",
+                "value": "",
+                "type": "path",
+                "description": "Plasmic CMS database identifier."
+              },
+              {
+                "name": "CMS_MODEL_ID",
+                "value": "",
+                "type": "path",
+                "description": "Plasmic CMS model (table) identifier."
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "JSON filter object (typically supplied as JSON string)."
+              },
+              {
+                "name": "q.limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "q.offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "draft",
+                "value": "",
+                "type": "query",
+                "description": "Pass `1` to include draft/unpublished rows (requires secret token)."
+              },
+              {
+                "name": "locale",
+                "value": "",
+                "type": "query",
+                "description": "Locale tag, for example `ar-JO`."
+              }
+            ]
+          },
+          "docs": "Query items"
+        },
+        {
+          "info": {
+            "name": "Count items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.plasmic.app/api/v1/cms/databases/:CMS_ID/tables/:CMS_MODEL_ID/count",
+            "params": [
+              {
+                "name": "CMS_ID",
+                "value": "",
+                "type": "path",
+                "description": "Plasmic CMS database identifier."
+              },
+              {
+                "name": "CMS_MODEL_ID",
+                "value": "",
+                "type": "path",
+                "description": "Plasmic CMS model (table) identifier."
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "locale",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Count items"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Rows",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create item (row)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.plasmic.app/api/v1/cms/databases/:CMS_ID/tables/:CMS_MODEL_ID/rows",
+            "params": [
+              {
+                "name": "CMS_ID",
+                "value": "",
+                "type": "path",
+                "description": "Plasmic CMS database identifier."
+              },
+              {
+                "name": "CMS_MODEL_ID",
+                "value": "",
+                "type": "path",
+                "description": "Plasmic CMS model (table) identifier."
+              },
+              {
+                "name": "publish",
+                "value": "",
+                "type": "query",
+                "description": "Pass `1` to auto-publish the created row."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create item (row)"
+        },
+        {
+          "info": {
+            "name": "Update item (row)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://data.plasmic.app/api/v1/cms/rows/:ROW_ID",
+            "params": [
+              {
+                "name": "ROW_ID",
+                "value": "",
+                "type": "path",
+                "description": "Plasmic CMS row identifier."
+              },
+              {
+                "name": "publish",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update item (row)"
+        },
+        {
+          "info": {
+            "name": "Delete item (row)",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://data.plasmic.app/api/v1/cms/rows/:ROW_ID",
+            "params": [
+              {
+                "name": "ROW_ID",
+                "value": "",
+                "type": "path",
+                "description": "Plasmic CMS row identifier."
+              },
+              {
+                "name": "publish",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Delete item (row)"
+        },
+        {
+          "info": {
+            "name": "Publish item (row)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://data.plasmic.app/api/v1/cms/rows/:ROW_ID/publish",
+            "params": [
+              {
+                "name": "ROW_ID",
+                "value": "",
+                "type": "path",
+                "description": "Plasmic CMS row identifier."
+              }
+            ]
+          },
+          "docs": "Publish item (row)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
