@@ -10,7 +10,7 @@ description: >-
   exposes a CMS for structured content, a CLI for code synchronization, and a
   REST API for programmatic access. Open source components live under the
   plasmicapp GitHub organization.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Visual Builder
   - Headless CMS
