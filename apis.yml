@@ -155,7 +155,7 @@ common:
     url: https://docs.plasmic.app/
   - type: GitHub
     url: https://github.com/plasmicapp/plasmic
-  - type: Forum
+  - type: Forums
     url: https://forum.plasmic.app/
   - type: Slack
     url: https://plasmic.app/slack
