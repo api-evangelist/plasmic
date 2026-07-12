@@ -149,6 +149,10 @@ apis:
       - type: Repository
         url: https://github.com/plasmicapp/plasmic
 common:
+  - type: DomainSecurity
+    url: security/plasmic-domain-security.yml
+  - type: Authentication
+    url: authentication/plasmic-authentication.yml
   - type: Website
     url: https://www.plasmic.app/
   - type: Documentation
@@ -163,6 +167,8 @@ common:
     url: https://www.linkedin.com/company/plasmicapp
   - type: Twitter
     url: https://twitter.com/plasmicapp
+  - url: https://www.plasmic.app/blog/feed.xml
+    type: Blog
 integrations:
   - name: React
   - name: Next.js

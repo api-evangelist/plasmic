@@ -1,0 +1,19 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/plasmic-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: cmsTokens
+  type: apiKey
+  in: header
+  parameter: x-plasmic-api-cms-tokens
+  description: |-
+    Plasmic CMS authentication header in the form `CMS_ID:TOKEN`. Use the
+    public token for read operations and the secret token for write
+    operations.
+  sources:
+  - openapi/plasmic-openapi.yml
