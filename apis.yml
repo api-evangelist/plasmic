@@ -149,6 +149,8 @@ apis:
       - type: Repository
         url: https://github.com/plasmicapp/plasmic
 common:
+  - type: AgenticAccess
+    url: agentic-access/plasmic-agentic-access.yml
   - type: DomainSecurity
     url: security/plasmic-domain-security.yml
   - type: Authentication
