@@ -1,0 +1,16 @@
+{
+  "provider": "plasmic",
+  "sources": [
+    "plasmic-items-api-openapi.yml",
+    "plasmic-rows-api-openapi.yml"
+  ],
+  "outputs": [
+    "plasmic-items-api-openapi.yml",
+    "plasmic-rows-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
