@@ -170,6 +170,9 @@ apis:
   - type: OpenAPI
     url: openapi/plasmic-rows-api-openapi.yml
 common:
+  - type: License
+    name: MIT
+    url: https://github.com/plasmicapp/plasmic/blob/master/LICENSE
   - type: AgenticAccess
     url: agentic-access/plasmic-agentic-access.yml
   - type: DomainSecurity
