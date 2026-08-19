@@ -1,0 +1,114 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Plasmic CMS Items API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-plasmic-api-cms-tokens",
+      "value": "{{x-plasmic-api-cms-tokens}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Query items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.plasmic.app/api/v1/cms/databases/:CMS_ID/tables/:CMS_MODEL_ID/query",
+            "params": [
+              {
+                "name": "CMS_ID",
+                "value": "",
+                "type": "path",
+                "description": "Plasmic CMS database identifier."
+              },
+              {
+                "name": "CMS_MODEL_ID",
+                "value": "",
+                "type": "path",
+                "description": "Plasmic CMS model (table) identifier."
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "JSON filter object (typically supplied as JSON string)."
+              },
+              {
+                "name": "q.limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "q.offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "draft",
+                "value": "",
+                "type": "query",
+                "description": "Pass `1` to include draft/unpublished rows (requires secret token)."
+              },
+              {
+                "name": "locale",
+                "value": "",
+                "type": "query",
+                "description": "Locale tag, for example `ar-JO`."
+              }
+            ]
+          },
+          "docs": "Query items"
+        },
+        {
+          "info": {
+            "name": "Count items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://data.plasmic.app/api/v1/cms/databases/:CMS_ID/tables/:CMS_MODEL_ID/count",
+            "params": [
+              {
+                "name": "CMS_ID",
+                "value": "",
+                "type": "path",
+                "description": "Plasmic CMS database identifier."
+              },
+              {
+                "name": "CMS_MODEL_ID",
+                "value": "",
+                "type": "path",
+                "description": "Plasmic CMS model (table) identifier."
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "locale",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Count items"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

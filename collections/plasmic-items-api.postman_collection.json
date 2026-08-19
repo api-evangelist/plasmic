@@ -1,0 +1,349 @@
+{
+  "item": [
+    {
+      "id": "135510b5-3153-4de9-870e-5b21c64c909c",
+      "name": "Items",
+      "description": {
+        "content": "Query and count items in a CMS model.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "282a7ba6-4a9d-4887-b8f3-878415774c53",
+          "name": "Query items",
+          "request": {
+            "name": "Query items",
+            "description": {},
+            "url": {
+              "path": [
+                "cms",
+                "databases",
+                ":CMS_ID",
+                "tables",
+                ":CMS_MODEL_ID",
+                "query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>",
+                  "description": "JSON filter object (typically supplied as JSON string)."
+                },
+                {
+                  "disabled": false,
+                  "key": "q.limit",
+                  "value": "100"
+                },
+                {
+                  "disabled": false,
+                  "key": "q.offset",
+                  "value": "0"
+                },
+                {
+                  "disabled": false,
+                  "key": "draft",
+                  "value": "<integer>",
+                  "description": "Pass `1` to include draft/unpublished rows (requires secret token)."
+                },
+                {
+                  "disabled": false,
+                  "key": "locale",
+                  "value": "<string>",
+                  "description": "Locale tag, for example `ar-JO`."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "CMS_ID",
+                  "description": "(Required) Plasmic CMS database identifier."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "CMS_MODEL_ID",
+                  "description": "(Required) Plasmic CMS model (table) identifier."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6370962c-c71a-455b-9677-dc6af5e72c80",
+              "name": "Items collection.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cms",
+                    "databases",
+                    ":CMS_ID",
+                    "tables",
+                    ":CMS_MODEL_ID",
+                    "query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "q.limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "q.offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "draft",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "locale",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "CMS_ID",
+                      "description": "(Required) Plasmic CMS database identifier."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "CMS_MODEL_ID",
+                      "description": "(Required) Plasmic CMS model (table) identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-plasmic-api-cms-tokens",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"rows\": [\n    {\n      \"id\": \"string\",\n      \"identifier\": \"string\",\n      \"data\": {\n        \"key_0\": 8429.00255900664\n      },\n      \"createdAt\": \"1976-12-23T22:08:33.775Z\",\n      \"updatedAt\": \"1993-02-14T07:40:42.300Z\"\n    },\n    {\n      \"id\": \"string\",\n      \"identifier\": \"string\",\n      \"data\": {\n        \"key_0\": \"string\"\n      },\n      \"createdAt\": \"1994-06-06T20:14:59.350Z\",\n      \"updatedAt\": \"1974-10-13T16:28:44.626Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ee65cdea-91be-44e7-9ddb-a5626b72f6d3",
+          "name": "Count items",
+          "request": {
+            "name": "Count items",
+            "description": {},
+            "url": {
+              "path": [
+                "cms",
+                "databases",
+                ":CMS_ID",
+                "tables",
+                ":CMS_MODEL_ID",
+                "count"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "q",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "locale",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "CMS_ID",
+                  "description": "(Required) Plasmic CMS database identifier."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "CMS_MODEL_ID",
+                  "description": "(Required) Plasmic CMS model (table) identifier."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9141c651-2b20-4f66-9ddc-bc6095157048",
+              "name": "Item count.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cms",
+                    "databases",
+                    ":CMS_ID",
+                    "tables",
+                    ":CMS_MODEL_ID",
+                    "count"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "locale",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "CMS_ID",
+                      "description": "(Required) Plasmic CMS database identifier."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "CMS_MODEL_ID",
+                      "description": "(Required) Plasmic CMS model (table) identifier."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-plasmic-api-cms-tokens",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 2869\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://data.plasmic.app/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-plasmic-api-cms-tokens"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "582729ae-75d2-4027-8a4b-4f9ffb2069cf",
+    "name": "Plasmic CMS Items API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Plasmic CMS is the headless content API for structured data managed\ninside Plasmic. Read and write rows in models defined in Studio. All\nrequests are authenticated with the\n`x-plasmic-api-cms-tokens: CMS_ID:TOKEN` header. Use the public token\nfor read operations and the secret token for write operations.\n\n\nContact Support:\n Name: API Evangelist\n Email: kin@apievangelist.com",
+      "type": "text/plain"
+    }
+  }
+}
