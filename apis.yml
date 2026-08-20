@@ -145,6 +145,9 @@ apis:
   baseURL: https://github.com/plasmicapp/plasmic
   tags:
   - MCP
+  - Artificial Intelligence
+  tags_raw:
+  - MCP
   - AI
   properties:
   - type: Repository
@@ -155,6 +158,8 @@ apis:
   humanURL: https://studio.plasmic.app/
   baseURL: https://studio.plasmic.app/
   tags:
+  - Item
+  tags_raw:
   - Items
   properties:
   - type: OpenAPI
