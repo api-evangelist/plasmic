@@ -10,6 +10,19 @@ description: >-
   exposes a CMS for structured content, a CLI for code synchronization, and a
   REST API for programmatic access. Open source components live under the
   plasmicapp GitHub organization.
+deliveryModel:
+  model: self-hosted
+  license: MIT
+  open_source: true
+  commercial: false
+  callable_host: true
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: self-serve
@@ -175,6 +188,10 @@ apis:
   - type: OpenAPI
     url: openapi/plasmic-rows-api-openapi.yml
 common:
+  - type: IssueTracker
+    url: https://github.com/plasmicapp/plasmic/issues
+  - type: ContributionGuide
+    url: https://github.com/plasmicapp/plasmic/blob/master/CONTRIBUTING.md
   - type: License
     name: MIT
     url: https://github.com/plasmicapp/plasmic/blob/master/LICENSE
