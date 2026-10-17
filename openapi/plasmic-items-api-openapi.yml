@@ -106,13 +106,6 @@ paths:
       x-operation-id-source: derived
 components:
   parameters:
-    CMSModelID:
-      name: CMS_MODEL_ID
-      in: path
-      required: true
-      schema:
-        type: string
-      description: Plasmic CMS model (table) identifier.
     CMSID:
       name: CMS_ID
       in: path
@@ -120,6 +113,13 @@ components:
       schema:
         type: string
       description: Plasmic CMS database identifier.
+    CMSModelID:
+      name: CMS_MODEL_ID
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Plasmic CMS model (table) identifier.
   schemas:
     Row:
       type: object

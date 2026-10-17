@@ -107,29 +107,15 @@ paths:
       operationId: postCmsRowsByROWIDPublish
       x-operation-id-source: derived
 components:
-  parameters:
-    CMSModelID:
-      name: CMS_MODEL_ID
-      in: path
-      required: true
-      schema:
-        type: string
-      description: Plasmic CMS model (table) identifier.
-    RowID:
-      name: ROW_ID
-      in: path
-      required: true
-      schema:
-        type: string
-      description: Plasmic CMS row identifier.
-    CMSID:
-      name: CMS_ID
-      in: path
-      required: true
-      schema:
-        type: string
-      description: Plasmic CMS database identifier.
   schemas:
+    RowInput:
+      type: object
+      properties:
+        identifier:
+          type: string
+        data:
+          type: object
+          additionalProperties: true
     Row:
       type: object
       properties:
@@ -146,14 +132,28 @@ components:
         updatedAt:
           type: string
           format: date-time
-    RowInput:
-      type: object
-      properties:
-        identifier:
-          type: string
-        data:
-          type: object
-          additionalProperties: true
+  parameters:
+    CMSID:
+      name: CMS_ID
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Plasmic CMS database identifier.
+    CMSModelID:
+      name: CMS_MODEL_ID
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Plasmic CMS model (table) identifier.
+    RowID:
+      name: ROW_ID
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Plasmic CMS row identifier.
   securitySchemes:
     cmsTokens:
       type: apiKey
