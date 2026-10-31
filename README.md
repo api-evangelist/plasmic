@@ -1,4 +1,4 @@
-# Plasmic (plasmic)
+# Plasmic
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,199 +66,126 @@
 
 Plasmic is a visual builder and headless CMS for front-end development. Designers and developers compose pages and components in Plasmic Studio, then ship them via either the Headless API (Loader) for runtime fetching or the Codegen pipeline for generated React/Next.js/Gatsby source. The platform also exposes a CMS for structured content, a CLI for code synchronization, and a REST API for programmatic access. Open source components live under the plasmicapp GitHub organization.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/plasmic/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/plasmic/refs/heads/main/apis.yml)
+**Areas:** Visual Builder · Headless CMS · React · Next.js · Gatsby · Low-Code · Frontend
 
-## Tags
+## Plasmic on APIs.io
 
-- Visual Builder
-- Headless CMS
-- React
-- Next.js
-- Gatsby
-- Low-Code
-- Frontend
+Everything profiled for Plasmic is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/plasmic/](https://apis.io/providers/plasmic/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (11)
 
-- **Created:** 2026-05-23
-- **Modified:** 2026-05-23
+- [Plasmic Studio](https://apis.io/apis/plasmic/studio/) — Browser-based visual builder where designers and developers compose pages, components, and design systems. Outputs are consumed downstream by the Loader,…
+- [Plasmic Loader (Headless API)](https://apis.io/apis/plasmic/loader/) — Runtime fetching API used by React, Next.js, and Gatsby integrations to pull Studio-published pages and components into a host app. Supports server-side…
+- [Plasmic Codegen API](https://apis.io/apis/plasmic/codegen/) — Generates React source code from a Plasmic project, synced into the host repository via the Plasmic CLI. Produces editable presentational components…
+- [Plasmic CMS API](https://apis.io/apis/plasmic/cms/) — Headless content API for structured data managed inside Plasmic. Supports reading and writing rows in models defined in Studio, used to power data bindings…
+- [Plasmic CLI](https://apis.io/apis/plasmic/cli/) — Command-line tool (plasmicapp/cli) for authenticating against Plasmic and syncing generated code into a repository. Commands include `plasmic auth`,…
+- [Plasmic React Integration](https://apis.io/apis/plasmic/react/) — React loader and components for embedding Plasmic-built pages inside React apps.
+- [Plasmic Next.js Integration](https://apis.io/apis/plasmic/nextjs/) — Next.js loader supporting both pages and app router. Used to render Plasmic-managed pages with SSR/SSG/ISR.
+- [Plasmic Gatsby Integration](https://apis.io/apis/plasmic/gatsby/) — Gatsby plugin loader for embedding Plasmic-built pages inside Gatsby sites.
+- [Plasmic MCP Server](https://apis.io/apis/plasmic/mcp/) — Model Context Protocol server exposing Plasmic project context to AI agents and IDE assistants.
+- [Plasmic Items API](https://apis.io/apis/plasmic/plasmic-items-api/) — Query and count items in a CMS model.
+- [Plasmic Rows API](https://apis.io/apis/plasmic/plasmic-rows-api/) — Create, update, publish, and delete CMS rows.
 
-## APIs
+### Published properties
 
-### Plasmic Studio
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Browser-based visual builder where designers and developers compose pages, components, and design systems. Outputs are consumed downstream by the Loader, Codegen, and CMS APIs.
+#### Agentic access (1)
 
-- **Human URL:** [https://studio.plasmic.app/](https://studio.plasmic.app/)
-- **Base URL:** `https://studio.plasmic.app/`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Plasmic Agentic Access](https://apis.io/agentic-access/plasmic/plasmic-agentic-access/)
 
-- Studio
-- Visual Editor
+#### Collections (3)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Website](https://studio.plasmic.app/)
-- [Postman Collection](collections/plasmic.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/plasmic.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Plasmic CMS API](https://apis.io/collections/plasmic/open-plasmic/)
+- [Plasmic CMS Items API](https://apis.io/collections/plasmic/open-plasmic-items-api/)
+- [Plasmic CMS Items Rows API](https://apis.io/collections/plasmic/open-plasmic-rows-api/)
 
-### Plasmic Loader (Headless API)
+#### Security (2)
 
-Runtime fetching API used by React, Next.js, and Gatsby integrations to pull Studio-published pages and components into a host app. Supports server-side rendering, incremental static regeneration, and on-demand revalidation. Available via @plasmicapp/loader-react, @plasmicapp/loader-nextjs, and @plasmicapp/loader-gatsby.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://docs.plasmic.app/learn/loader/](https://docs.plasmic.app/learn/loader/)
-- **Base URL:** `https://codegen.plasmic.app`
+- [Plasmic Authentication](https://apis.io/security/plasmic/plasmic-authentication/)
+- [Plasmic Domain Security](https://apis.io/security/plasmic/plasmic-domain-security/)
 
-#### Tags
+#### Plans and pricing (1)
 
-- Headless
-- Loader
-- SSR
+Published plans, tiers and prices.
 
-#### Properties
+- [Plasmic Plans Pricing](https://apis.io/plans/plasmic/plasmic-plans-pricing/)
 
-- [Documentation](https://docs.plasmic.app/learn/loader/)
-- [Postman Collection](collections/plasmic.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/plasmic.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Rate limits (1)
 
-### Plasmic Codegen API
+Published request limits.
 
-Generates React source code from a Plasmic project, synced into the host repository via the Plasmic CLI. Produces editable presentational components alongside skeleton wrappers for app code.
+- [Plasmic Rate Limits](https://apis.io/rate-limits/plasmic/plasmic-rate-limits/)
 
-- **Human URL:** [https://docs.plasmic.app/learn/codegen-guide/](https://docs.plasmic.app/learn/codegen-guide/)
-- **Base URL:** `https://codegen.plasmic.app`
+#### FinOps (1)
 
-#### Tags
+What the API costs to run, by operation.
 
-- Codegen
-- React
+- [Plasmic Finops](https://apis.io/finops/plasmic/plasmic-finops/)
 
-#### Properties
+## Where to find this API
 
-- [Documentation](https://docs.plasmic.app/learn/codegen-guide/)
-- [Postman Collection](collections/plasmic.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/plasmic.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Plasmic CMS API
-
-Headless content API for structured data managed inside Plasmic. Supports reading and writing rows in models defined in Studio, used to power data bindings inside Plasmic pages or external apps.
-
-- **Human URL:** [https://docs.plasmic.app/learn/plasmic-cms/](https://docs.plasmic.app/learn/plasmic-cms/)
-- **Base URL:** `https://data.plasmic.app/api/v1/cms`
-
-#### Tags
-
-- CMS
-- Headless Content
-
-#### Properties
-
-- [Documentation](https://docs.plasmic.app/learn/plasmic-cms/)
-- [Postman Collection](collections/plasmic.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/plasmic.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Plasmic CLI
-
-Command-line tool (plasmicapp/cli) for authenticating against Plasmic and syncing generated code into a repository. Commands include `plasmic auth`, `plasmic sync`, and `plasmic watch`.
-
-- **Human URL:** [https://www.npmjs.com/package/@plasmicapp/cli](https://www.npmjs.com/package/@plasmicapp/cli)
-- **Base URL:** `https://github.com/plasmicapp/plasmic`
-
-#### Tags
-
-- CLI
-- Tooling
-
-#### Properties
-
-- [Repository](https://github.com/plasmicapp/plasmic)
-- [Postman Collection](collections/plasmic.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/plasmic.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Plasmic React Integration
-
-React loader and components for embedding Plasmic-built pages inside React apps.
-
-- **Human URL:** [https://docs.plasmic.app/learn/react-quickstart/](https://docs.plasmic.app/learn/react-quickstart/)
-- **Base URL:** `https://www.npmjs.com/package/@plasmicapp/loader-react`
-
-#### Tags
-
-- React
-- Integration
-
-#### Properties
-
-- [Documentation](https://docs.plasmic.app/learn/react-quickstart/)
-- [Postman Collection](collections/plasmic.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/plasmic.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Plasmic Next.js Integration
-
-Next.js loader supporting both pages and app router. Used to render Plasmic-managed pages with SSR/SSG/ISR.
-
-- **Human URL:** [https://docs.plasmic.app/learn/nextjs-quickstart/](https://docs.plasmic.app/learn/nextjs-quickstart/)
-- **Base URL:** `https://www.npmjs.com/package/@plasmicapp/loader-nextjs`
-
-#### Tags
-
-- Next.js
-- Integration
-
-#### Properties
-
-- [Documentation](https://docs.plasmic.app/learn/nextjs-quickstart/)
-- [Postman Collection](collections/plasmic.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/plasmic.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Plasmic Gatsby Integration
-
-Gatsby plugin loader for embedding Plasmic-built pages inside Gatsby sites.
-
-- **Human URL:** [https://docs.plasmic.app/learn/gatsby-quickstart/](https://docs.plasmic.app/learn/gatsby-quickstart/)
-- **Base URL:** `https://www.npmjs.com/package/@plasmicapp/loader-gatsby`
-
-#### Tags
-
-- Gatsby
-- Integration
-
-#### Properties
-
-- [Documentation](https://docs.plasmic.app/learn/gatsby-quickstart/)
-- [Postman Collection](collections/plasmic.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/plasmic.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Plasmic MCP Server
-
-Model Context Protocol server exposing Plasmic project context to AI agents and IDE assistants.
-
-- **Human URL:** [https://docs.plasmic.app/](https://docs.plasmic.app/)
-- **Base URL:** `https://github.com/plasmicapp/plasmic`
-
-#### Tags
-
-- MCP
-- AI
-
-#### Properties
-
-- [Repository](https://github.com/plasmicapp/plasmic)
-- [Postman Collection](collections/plasmic.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/plasmic.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.plasmic.app/)
 - [Documentation](https://docs.plasmic.app/)
-- [Git Hub](https://github.com/plasmicapp/plasmic)
-- [Forum](https://forum.plasmic.app/)
-- [Slack](https://plasmic.app/slack)
-- [LinkedIn](https://www.linkedin.com/company/plasmicapp)
-- [Twitter](https://twitter.com/plasmicapp)
+- [Blog](https://www.plasmic.app/blog/feed.xml)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 24.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 5.3 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/plasmic/](https://apis.io/providers/plasmic/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Plasmic: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/plasmic/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
